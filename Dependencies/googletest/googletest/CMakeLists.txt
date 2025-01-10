@@ -10,6 +10,9 @@
 
 # When other libraries are using a shared version of runtime libraries,
 # Google Test also has to use one.
+
+set(GOOGLETEST_VERSION "1.14.0")  # Ensure the version is defined
+
 option(
   gtest_force_shared_crt
   "Use shared (DLL) run-time lib even when Google Test is built as static lib."

@@ -6,9 +6,4 @@ namespace RR
         : m_processId { process }
     {
     }
-
-    void MemoryScanner::ReadMemory()
-    {
-        
-    }
 }
