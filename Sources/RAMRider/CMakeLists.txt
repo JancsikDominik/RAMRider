@@ -1,11 +1,11 @@
 # RAMRider library
 set(RAMRIDER_SOURCES
-	"DebugUtils/Assert.cpp"
-	"DebugUtils/Assert.hpp"
-	"DebugUtils/Compiler.hpp"
-	"MemoryScanner.hpp"
-	"ProcessHandler.hpp"
-	"ProcessHandler.cpp"
+	"RAMRider/DebugUtils/Assert.cpp"
+	"RAMRider/DebugUtils/Assert.hpp"
+	"RAMRider/DebugUtils/Compiler.hpp"
+	"RAMRider/MemoryScanner.hpp"
+	"RAMRider/ProcessHandler.hpp"
+	"RAMRider/ProcessHandler.cpp"
 )
 
 add_library(ramrider STATIC ${RAMRIDER_SOURCES})

@@ -1,7 +1,7 @@
 # RAMRider CLI executable
 
 set(RAMRIDER_CLI_SOURCES
-	"main.cpp"
+	"CLI/main.cpp"
 )
 
 add_executable(ramrider-cli ${RAMRIDER_CLI_SOURCES})

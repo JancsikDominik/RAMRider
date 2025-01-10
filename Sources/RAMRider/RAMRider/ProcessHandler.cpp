@@ -1,8 +1,10 @@
 #include "ProcessHandler.hpp"
+
+// from std
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <vector>
-#include <algorithm>
 
 namespace RR
 {
@@ -14,9 +16,8 @@ namespace RR
 
         for (const auto& entry : fs::directory_iterator("/proc")) {
             if (entry.is_directory()) {
-
                 std::string dirName = entry.path().filename().string();
-                if (std::all_of(dirName.begin(), dirName.end(), ::isdigit)) {
+                if (std::ranges::all_of(dirName, ::isdigit)) {
                     pid_t pid = std::stoi(dirName);
                     std::ifstream cmdlineFile { entry.path() / "cmdline" };
 
@@ -38,7 +39,7 @@ namespace RR
     {
         std::vector<ProcessInfo> processes = CollectProcesses();
 
-        auto it = std::find_if(processes.begin(), processes.end(), [processName](const ProcessInfo& process) {
+        const auto it = std::ranges::find_if(processes, [processName](const ProcessInfo& process) {
             return process.name.find(processName) != std::string::npos;
         });
 
