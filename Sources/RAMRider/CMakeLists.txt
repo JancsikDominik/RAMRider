@@ -4,6 +4,7 @@ set(RAMRIDER_SOURCES
 	"RAMRider/DebugUtils/Assert.hpp"
 	"RAMRider/DebugUtils/Compiler.hpp"
 	"RAMRider/MemoryScanner.hpp"
+	"RAMRider/MemoryScanner.cpp"
 	"RAMRider/ProcessHandler.hpp"
 	"RAMRider/ProcessHandler.cpp"
 )
