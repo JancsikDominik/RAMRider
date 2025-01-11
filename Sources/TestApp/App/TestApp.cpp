@@ -42,30 +42,18 @@ void TestApp::RunFor(const std::chrono::seconds& seconds) const
 void TestApp::PrintAll() const
 {
 	std::cout   << "Data:\n"
-			    << "    uint8: " << static_cast<uint16_t>(m_uint8Data)
-			    << "\n"
-	            << "    uint16: " << m_uint16Data
-			    << "\n"
-			    << "    uint32: " << m_uint32Data
-			    << "\n"
-				<< "    uint64: " << m_uint64Data
-				<< "\n"
-				<< "    int8: " << static_cast<int16_t>(m_int8Data)
-				<< "\n"
-				<< "    int16: " << m_int16Data
-				<< "\n"
-				<< "    int32: " << m_int32Data
-				<< "\n"
-				<< "    int64: " << m_int64Data
-				<< "\n"
-				<< "    float: " << m_floatData
-				<< "\n"
-				<< "    double: " << m_doubleData
-				<< "\n"
-				<< "    string: " << m_stringData
-				<< "\n"
-				<< "    char*: " << m_charPtrData
-				<< std::endl;
+			    << "    uint8: " << static_cast<uint16_t>(m_uint8Data) << "\n"
+	            << "    uint16: " << m_uint16Data << "\n"
+			    << "    uint32: " << m_uint32Data << "\n"
+				<< "    uint64: " << m_uint64Data << "\n"
+				<< "    int8: " << static_cast<int16_t>(m_int8Data) << "\n"
+				<< "    int16: " << m_int16Data << "\n"
+				<< "    int32: " << m_int32Data << "\n"
+				<< "    int64: " << m_int64Data << "\n"
+				<< "    float: " << m_floatData << "\n"
+				<< "    double: " << m_doubleData << "\n"
+				<< "    string: " << m_stringData << "\n"
+				<< "    char*: " << m_charPtrData << std::endl;
 }
 
 int main()
