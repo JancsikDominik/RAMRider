@@ -19,4 +19,5 @@ set(CMAKE_CONFIGURATION_TYPES "Debug;Release;Production" CACHE STRING "Active bu
 # Add subdirectories for projects
 add_subdirectory(Sources/RAMRider)
 add_subdirectory(Sources/RAMRiderCLI)
+add_subdirectory(Sources/TestApp)
 add_subdirectory(Dependencies/googletest/googletest)
