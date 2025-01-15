@@ -2,8 +2,25 @@
 
 #include <iostream>
 
+enum class BuildType
+{
+	Production, Release, Debug
+};
+
+#if defined(__PROD__)
+	static constexpr BuildType build = BuildType::Production;
+#elif defined(__RELEASE__)
+	static constexpr BuildType build = BuildType::Release;
+#elif defined(__DEBUG__)
+	static constexpr BuildType build = BuildType::Debug;
+#else
+	#error "Build type not defined"
+#endif
+
 namespace Assert
 {
+	constexpr bool DieOnAssert = build == BuildType::Release;
+
 	void AssertionFailed(AssertType type, const std::string& expr, const std::string& func, const std::string& file, int line, std::optional<std::string> msg)
 	{
 		std::string assertFailed;
@@ -30,7 +47,8 @@ namespace Assert
 		std::cerr << fullMessage << std::endl;
 
 		DBBREAK();
-
-		std::abort();
+		
+		if constexpr (DieOnAssert)
+			std::abort();
 	}
 }
